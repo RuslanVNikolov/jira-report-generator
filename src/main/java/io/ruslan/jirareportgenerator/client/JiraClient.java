@@ -20,14 +20,16 @@ public class JiraClient {
     private static final String SEARCH_ENDPOINT = "/rest/api/2/search";
     private static final String JQL_QUERY = "issuetype in (Bug, Documentation, Enhancement) and updated > startOfWeek()";
     private static final String FIELDS = "summary,key,issuetype,priority,description,reporter,created,comment";
+    private static final String JQL_PARAM = "jql";
+    private static final String FIELDS_PARAM = "fields";
 
-    private final RestTemplate restTemplate = new RestTemplate();
+    private final RestTemplate restTemplate;
 
     public JiraResponse fetchJiraIssues() {
         URI uri = UriComponentsBuilder.fromHttpUrl(JIRA_BASE_URL)
                 .path(SEARCH_ENDPOINT)
-                .queryParam("jql", JQL_QUERY)
-                .queryParam("fields", FIELDS)
+                .queryParam(JQL_PARAM, JQL_QUERY)
+                .queryParam(FIELDS_PARAM, FIELDS)
                 .build()
                 .encode()
                 .toUri();

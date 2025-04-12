@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Slf4j
 @RequiredArgsConstructor
-@RequestMapping("/api/reports")
+@RequestMapping("/reports/jira")
 public class JiraReportController {
 
     private final JiraReportService jiraReportService;
@@ -30,9 +30,9 @@ public class JiraReportController {
         JiraReport report = jiraReportService.generateReport(IssueConverter.issuesFromResponse(jiraClient.fetchJiraIssues()), ReportFormat.fromString(format));
 
         return ResponseEntity.ok()
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment;filename=" + report.getFileName())
-                .contentType(report.getMediaType())
-                .contentLength(report.getFileData().contentLength())
-                .body(report.getFileData());
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment;filename=" + report.fileName())
+                .contentType(report.mediaType())
+                .contentLength(report.fileData().contentLength())
+                .body(report.fileData());
     }
 }

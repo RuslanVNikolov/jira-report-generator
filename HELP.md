@@ -1,8 +1,6 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'io.ruslan.top-100-crypto' is invalid and this project uses 'io.ruslan.jirareportgenerator' instead.
-
 # Getting Started
 
 ### Reference Documentation
