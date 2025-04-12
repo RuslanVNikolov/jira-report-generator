@@ -1,6 +1,5 @@
 package io.ruslan.jirareportgenerator.client;
 
-import io.ruslan.jirareportgenerator.model.dto.response.JiraIssues;
 import io.ruslan.jirareportgenerator.model.response.JiraResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

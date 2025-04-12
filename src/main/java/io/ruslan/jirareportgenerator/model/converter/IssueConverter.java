@@ -1,8 +1,8 @@
 package io.ruslan.jirareportgenerator.model.converter;
 
-import io.ruslan.jirareportgenerator.model.dto.response.JiraComment;
-import io.ruslan.jirareportgenerator.model.dto.response.JiraIssue;
-import io.ruslan.jirareportgenerator.model.dto.response.JiraIssues;
+import io.ruslan.jirareportgenerator.model.report.JiraComment;
+import io.ruslan.jirareportgenerator.model.report.JiraIssue;
+import io.ruslan.jirareportgenerator.model.report.JiraIssues;
 import io.ruslan.jirareportgenerator.model.response.JiraResponse;
 
 import java.util.List;

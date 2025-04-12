@@ -2,7 +2,8 @@ package io.ruslan.jirareportgenerator.controller;
 
 import io.ruslan.jirareportgenerator.client.JiraClient;
 import io.ruslan.jirareportgenerator.model.converter.IssueConverter;
-import io.ruslan.jirareportgenerator.model.dto.response.JiraReport;
+import io.ruslan.jirareportgenerator.model.report.JiraReport;
+import io.ruslan.jirareportgenerator.model.report.ReportFormat;
 import io.ruslan.jirareportgenerator.service.JiraReportService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -26,7 +27,7 @@ public class JiraReportController {
 
     @GetMapping
     public ResponseEntity<ByteArrayResource> getReport(@RequestParam(name = "format", defaultValue = "json") String format) {
-        JiraReport report = jiraReportService.generateReport(IssueConverter.issuesFromResponse(jiraClient.fetchJiraIssues()), format);
+        JiraReport report = jiraReportService.generateReport(IssueConverter.issuesFromResponse(jiraClient.fetchJiraIssues()), ReportFormat.fromString(format));
 
         return ResponseEntity.ok()
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment;filename=" + report.getFileName())

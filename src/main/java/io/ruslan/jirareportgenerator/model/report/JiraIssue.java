@@ -1,4 +1,4 @@
-package io.ruslan.jirareportgenerator.model.dto.response;
+package io.ruslan.jirareportgenerator.model.report;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;

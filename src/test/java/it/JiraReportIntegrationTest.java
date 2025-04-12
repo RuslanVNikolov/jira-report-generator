@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import io.ruslan.jirareportgenerator.Application;
-import io.ruslan.jirareportgenerator.model.dto.response.JiraIssues;
+import io.ruslan.jirareportgenerator.model.report.JiraIssues;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

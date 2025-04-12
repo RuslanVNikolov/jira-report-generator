@@ -1,7 +1,7 @@
 package io.ruslan.jirareportgenerator.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.ruslan.jirareportgenerator.model.dto.response.JiraIssue;
+import io.ruslan.jirareportgenerator.model.report.JiraIssue;
 
 public class JsonConverter {
 

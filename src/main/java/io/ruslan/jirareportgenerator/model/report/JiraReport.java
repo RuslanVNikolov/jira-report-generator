@@ -1,4 +1,4 @@
-package io.ruslan.jirareportgenerator.model.dto.response;
+package io.ruslan.jirareportgenerator.model.report;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
